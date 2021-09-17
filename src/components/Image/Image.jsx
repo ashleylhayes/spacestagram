@@ -1,5 +1,5 @@
 import React from 'react';
-import './image.scss';
+import './Image.scss';
 
 function Image(props) {
 
@@ -11,11 +11,11 @@ function Image(props) {
                 images.map((image, index) => {
                     console.log(image);
                     return(
-                        <div className='card' key={index}>
-                            <img className='card__image' src={image.url} alt={image.title} />
-                            <h2 className='card__title'>{image.title}</h2>
-                            <p className='card__date'>{image.date}</p>
-                            <p className='card__explanation'>{image.explanation}</p>
+                        <div className='card' key={image.id}>
+                            <img className='card__image' src={image.img_src} alt={image.camera.full_name} />
+                            <h2 className='card__title'>{image.rover.name}</h2>
+                            <p className='card__date'>{image.earth_date}</p>
+                            <p className='card__explanation'>{image.camera.full_name}</p>
                         </div>
                     )
                 })

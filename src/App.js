@@ -1,24 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Image from './components/Image/Image';
+import './App.scss';
 
 function App() {
 
   const [images, getImages] = useState('');
 
-  const URL = 'https://api.nasa.gov/planetary/apod?';
+  const URL = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?';
   const API_KEY = 'api_key=2p9fUMCADNCNMdwd5EHBkJTblfsunFTZ0mWSqNMp';
-  const START_DATE = '&start_date=2021-09-13';
+  const EARTH_DATE = '&earth_date=2021-09-01';
 
   useEffect(() => {
     getAllImages();
   }, []);
 
   const getAllImages = () => {
-    axios.get(URL + API_KEY + START_DATE)
+    axios.get(URL + API_KEY + EARTH_DATE)
     .then ((res) => {
-      console.log(res.data);
-      const allImages = res.data;
+      console.log(res.data.photos);
+      const allImages = res.data.photos;
       //adding data to state
       getImages(allImages);
     })
