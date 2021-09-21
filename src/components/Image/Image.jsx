@@ -1,5 +1,6 @@
 import React from 'react';
 import './Image.scss';
+import LikeButton from '../LikeButton/LikeButton';
 
 function Image(props) {
 
@@ -13,9 +14,10 @@ function Image(props) {
                     return(
                         <div className='card' key={image.id}>
                             <img className='card__image' src={image.img_src} alt={image.camera.full_name} />
-                            <h2 className='card__title'>{image.rover.name}</h2>
                             <p className='card__date'>{image.earth_date}</p>
+                            <h2 className='card__title'>{image.rover.name}</h2>
                             <p className='card__explanation'>{image.camera.full_name}</p>
+                            <LikeButton />
                         </div>
                     )
                 })
