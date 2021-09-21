@@ -1,15 +1,32 @@
+@import '../../styles/global.scss';
+
 .card {
     background-color: #f9f9f9;
-    width: 20vw;
+    width: 80vw;
     height: auto;
     margin: 25px;
     border-radius: 5px;
 
     &__image {
-        width: 20vw;
-        height: 20vw;
+        width: 80vw;
+        height: 80vw;
         border-radius: 5px 5px 0 0;
         object-fit: cover;
+
+        @include tablet {
+            width: 40vw;
+            height: 40vw;
+        }
+
+        @include tablet-large {
+            width: 25vw;
+            height: 25vw;
+        }
+
+        @include desktop {
+            width: 20vw;
+            height: 20vw;
+        }
     }
 
     &__details {
@@ -19,6 +36,27 @@
     &__date-container {
         display: flex;
         justify-content: space-between;
+    }
+
+    &__date {
+        align-self: center;
+    }
+
+    &__rover-name {
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    @include tablet {
+        width: 40vw;
+    }
+
+    @include tablet-large {
+        width: 25vw;
+    }
+
+    @include desktop {
+        width: 20vw;
     }
 }
 

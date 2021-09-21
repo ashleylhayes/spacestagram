@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Image from './components/Image/Image';
+import Header from './components/Header/Header';
 import './App.scss';
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Spacestagram</h1>
+      <Header />
       <div className='card-container'>
         <Image images={images} />
       </div>

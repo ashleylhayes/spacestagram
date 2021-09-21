@@ -1,0 +1,14 @@
+@import './partials/fonts';
+@import './partials/mixins';
+@import './partials/variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SpaceMono';
+}
+
+a {
+    text-decoration: none;
+}

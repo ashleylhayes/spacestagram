@@ -1,6 +1,9 @@
+@import '../../styles/global.scss';
+
 .heart {
   width: 30px;
   height: 30px;
+  cursor: pointer;
 
   &-container {
     display: flex;

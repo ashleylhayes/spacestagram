@@ -1,0 +1,36 @@
+@import '../../styles/global.scss';
+
+.header {
+    background-color: #FFFFFF;
+    width: 100vw;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__logo {
+        width: 250px;
+
+        @include tablet {
+            width: 315px;
+        }
+
+        @include tablet-large {
+            width: 350px;
+        }
+
+        @include desktop {
+            width: 400px;
+        }
+    }
+
+    @include tablet {
+        height: 75px;
+    }
+
+    @include desktop {
+        height: 100px;
+    }
+}

@@ -20,8 +20,8 @@ function Image(props) {
                                     <p className='card__date'>{image.earth_date}</p>
                                     <LikeButton />
                                 </div>
-                                <h2 className='card__title'>{image.rover.name}</h2>
-                                <p className='card__explanation'>{image.camera.full_name}</p>
+                                <h2 className='card__rover-name'>{image.rover.name}</h2>
+                                <p className='card__rover-camera'>{image.camera.full_name}</p>
                             </div>
                         </div>
                     )
