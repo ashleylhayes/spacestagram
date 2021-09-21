@@ -8,8 +8,29 @@
     &__image {
         width: 20vw;
         height: 20vw;
-        border-radius: 5px;
+        border-radius: 5px 5px 0 0;
         object-fit: cover;
     }
 
+    &__details {
+        padding: 10px;
+    }
+
+    &__date-container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.loading {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__image {
+        margin-bottom: 30px;
+    }
 }
