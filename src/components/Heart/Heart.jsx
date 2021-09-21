@@ -21,7 +21,7 @@ function Heart(props) {
     }
 
     return (
-        <div className='heart-container'>
+        <button className='heart-button'>
             <img 
             className="heart" 
             id={itemId}
@@ -29,7 +29,7 @@ function Heart(props) {
             src={renderHeart()}
             animation={animation} 
             alt="Heart" />
-        </div>
+        </button>
     )
 }
 

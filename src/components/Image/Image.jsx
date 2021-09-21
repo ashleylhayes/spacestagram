@@ -13,17 +13,17 @@ function Image(props) {
                 images.map((image, index) => {
                     console.log(image);
                     return(
-                        <div className='card' key={image.id}>
+                        <section className='card' key={image.id}>
                             <img className='card__image' src={image.img_src} alt={image.camera.full_name} />
                             <div className='card__details'>
                                 <div className='card__date-container'>
                                     <p className='card__date'>{image.earth_date}</p>
                                     <LikeButton />
                                 </div>
-                                <h2 className='card__rover-name'>{image.rover.name}</h2>
+                                <h2 className='card__rover-name'>{image.rover.name} Rover</h2>
                                 <p className='card__rover-camera'>{image.camera.full_name}</p>
                             </div>
-                        </div>
+                        </section>
                     )
                 })
             )

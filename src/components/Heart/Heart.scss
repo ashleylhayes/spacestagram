@@ -5,7 +5,7 @@
   height: 30px;
   cursor: pointer;
 
-  &-container {
+  &-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,6 +13,7 @@
     height: 50px;
     border-radius: 50%;
     background-color: #FFFFFF;
+    border: none;
   }
 }
 
