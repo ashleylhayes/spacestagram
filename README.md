@@ -10,15 +10,15 @@ Visit the deployed app here: [ahayes-spacestagram.netlify.app](https://ahayes-sp
 
 #### Desktop:
 
-<img src='public/ScreenShotDesktop.png' alt='Screen shot from desktop breakpoint of Spacestagram app' width='1440' />
+<img src='public/ScreenShotDesktop.png' alt='Screen shot from desktop breakpoint of Spacestagram app' width='1200' />
 
 #### Tablet:
 
-<img src='public/ScreenShotTablet.png' alt='Screen shot from tablet breakpoint of Spacestagram app' width='768' />
+<img src='public/ScreenShotTablet.png' alt='Screen shot from tablet breakpoint of Spacestagram app' width='500' />
 
 #### Mobile:
 
-<img src='public/ScreenShotMobile.png' alt='Screen shot from mobile breakpoint of Spacestagram app' width='375' />
+<img src='public/ScreenShotMobile.png' alt='Screen shot from mobile breakpoint of Spacestagram app' width='300' />
 
 ## Reflection
 
