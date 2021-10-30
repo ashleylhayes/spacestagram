@@ -13,17 +13,21 @@
 
     &__logo {
         width: 250px;
+        height: 25px;
 
         @include tablet {
             width: 315px;
+            height: 31.5px;
         }
 
         @include tablet-large {
             width: 350px;
+            height: 35px;
         }
 
         @include desktop {
             width: 400px;
+            height: 40px;
         }
     }
 
