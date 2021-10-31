@@ -7,26 +7,25 @@ import './App.scss';
 
 function App() {
 
-  const [images, getImages] = useState('');
-
-  const URL = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?';
-  const API_KEY = 'api_key=2p9fUMCADNCNMdwd5EHBkJTblfsunFTZ0mWSqNMp';
-  const EARTH_DATE = '&earth_date=2021-09-17';
+  const [images, setImages] = useState('');
 
   useEffect(() => {
+
+    const API_KEY = process.env.REACT_APP_NASA;
+    const URL = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=${API_KEY}&earth_date=2021-09-17`;
+
+    const getAllImages = () => {
+      axios.get( URL )
+      .then ((res) => {
+        console.log(res.data.photos);
+        const allImages = res.data.photos;
+        //adding data to state
+        setImages(allImages);
+      })
+      .catch (error => console.error(`Error: ${error}`));
+    };
     getAllImages();
   }, []);
-
-  const getAllImages = () => {
-    axios.get(URL + API_KEY + EARTH_DATE)
-    .then ((res) => {
-      console.log(res.data.photos);
-      const allImages = res.data.photos;
-      //adding data to state
-      getImages(allImages);
-    })
-    .catch (error => console.error(`Error: ${error}`));
-  }
 
   const [showButton, setShowButton] = useState(false);
 
