@@ -3,7 +3,7 @@ import axios from 'axios';
 import DatePicker from "react-datepicker";
 import { addDays, subDays, getMonth, getYear } from 'date-fns';
 import range from "lodash/range";
-import Image from './components/Image/Image';
+import ImageCard from './components/ImageCard/ImageCard';
 import Header from './components/Header/Header';
 import Arrow from './assets/icons/arrow.png';
 import './App.scss';
@@ -126,7 +126,7 @@ function App() {
       </div>
       
       <div className='card-container'>
-        <Image images={images} />
+        <ImageCard images={images} />
       </div>
 
       {showButton && (

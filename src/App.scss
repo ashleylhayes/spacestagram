@@ -17,17 +17,19 @@ input {
   background-color: #FFFFFF;
   width: 100vw;
   top: 60px;
-  height: 60px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
 
   @include tablet {
     top: 75px;
+    height: 50px;
   }
 
   @include desktop {
     top: 100px;
+    height: 60px;
   }
 }
 
@@ -42,14 +44,14 @@ input {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 135px;
+  margin-top: 115px;
 
   @include tablet {
-    margin-top: 175px;
+    margin-top: 145px;
   }
 
   @include desktop {
-    margin-top: 225px;
+    margin-top: 185px;
   }
 }
 

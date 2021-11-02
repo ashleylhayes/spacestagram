@@ -1,20 +1,37 @@
 import React from 'react';
-import './Image.scss';
+import { SRLWrapper } from 'simple-react-lightbox';
+import './ImageCard.scss';
 import LikeButton from '../LikeButton/LikeButton';
 import MarsImage from '../../assets/images/mars-animation.gif'
 
-function Image(props) {
+const options = {
+    thumbnails: {
+        showThumbnails: false
+    },
+    buttons: {
+        showAutoplayButton: false,
+        showDownloadButton: false,
+        showFullscreenButton: false,
+        showNextButton: false,
+        showPrevButton: false,
+        showThumbnailsButton: false
+
+    }
+}
+
+function ImageCard(props) {
 
     const displayImages = (props) =>{
         const {images} = props;
 
         if(images.length > 0) {
             return (
-                images.map((image, index) => {
-                    console.log(image);
+                images.map((image) => {
                     return(
                         <section className='card' key={image.id}>
-                            <img className='card__image' src={image.img_src} alt={image.camera.full_name} />
+                            <SRLWrapper options={options}>
+                                <img className='card__image' src={image.img_src} alt={image.camera.full_name} />
+                            </SRLWrapper>
                             <div className='card__details'>
                                 <div className='card__date-container'>
                                     <p className='card__date'>{image.earth_date}</p>
@@ -43,4 +60,4 @@ function Image(props) {
     )
 }
 
-export default Image;
+export default ImageCard;
