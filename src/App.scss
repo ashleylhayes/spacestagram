@@ -4,20 +4,52 @@ body {
   background-color: #f3f3f3;
 }
 
+input {
+  width: 125px;
+  text-align: center;
+  border-color:  rgba(103,66,212,1);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.date-container {
+  position: fixed;
+  background-color: #FFFFFF;
+  width: 100vw;
+  top: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include tablet {
+    top: 75px;
+  }
+
+  @include desktop {
+    top: 100px;
+  }
+}
+
+.date-label {
+  font-weight: 700;
+  margin-right: 5px;
+}
+
 .card-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 75px;
+  margin-top: 135px;
 
   @include tablet {
-    margin-top: 100px;
+    margin-top: 175px;
   }
 
   @include desktop {
-    margin-top: 125px;
+    margin-top: 225px;
   }
 }
 
