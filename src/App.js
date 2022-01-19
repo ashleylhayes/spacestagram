@@ -20,13 +20,14 @@ function App() {
     const EARTH_DATE = startDate.toLocaleDateString('en-CA');
     const URL = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=${API_KEY}&earth_date=${EARTH_DATE}`;
 
-    const getAllImages = () => {
-      axios.get( URL )
-      .then ((res) => {
+    const getAllImages = async () => {
+      try {
+        const res = await axios.get( URL );
         const allImages = res.data.photos;
         setImages(allImages);
-      })
-      .catch (error => console.error(`Error: ${error}`));
+      } catch (err) {
+        console.error(`Error: ${err}`);
+      }
     };
     getAllImages();
   }, [startDate]);
