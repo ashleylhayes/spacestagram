@@ -11,9 +11,15 @@ import "react-datepicker/dist/react-datepicker.css";
 
 function App() {
 
-  const yesterday = new Date(new Date().setDate(new Date().getDate()-1))
-  const [startDate, setStartDate] = useState(yesterday);
+  const landingDate = new Date('08/07/2012');
+  const todayDate = new Date();
+  const dateDifference = todayDate.getTime() - landingDate.getTime();
+  const daysSinceLanding = Math.ceil(dateDifference / (1000 * 3600 * 24));
+  const yesterdayDate = new Date(new Date().setDate(new Date().getDate()-1));
+
+  const [startDate, setStartDate] = useState(yesterdayDate);
   const [images, setImages] = useState('');
+
   useEffect(() => {
 
     const API_KEY = process.env.REACT_APP_NASA;
@@ -120,7 +126,7 @@ function App() {
         dateFormat='yyyy-MM-dd' 
         selected={startDate} 
         onChange={(date) => setStartDate(date)} 
-        minDate={subDays(new Date(), 3374)} 
+        minDate={subDays(new Date(), daysSinceLanding)} 
         maxDate={addDays(new Date(), -1)} 
         withPortal
       />
